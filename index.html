@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> Bill Calculator </title>
+    <script type = "text/javascript" src = "billCalculator.js"/> </script>
+    <link rel = "stylesheet" type = "text/css" href = "style.css" />
+</head>
+    <body onload = "init();">
+    <div id = "fit">
+        <h4/> &#9679; TWINJI TECH CUISINE &#9679; </h4>
+    	<div id = "container" class = "max"> 
+        	<div id = "inner" class = "left"> 
+            	<h1> MENU </h1>
+                <h2> Dinners </h2>
+                <form name = "form1">
+                <ul> <!-- a list is used to neatly display the menu options -->
+                	<li> 
+                    	Chicken Burger &nbsp; $4.95 &nbsp;
+                        <select id = "Dinner1"> 
+                        	<option selected> 1 </option>
+                            <option> 2 </option>
+                            <option> 3 </option>
+                            <option> 4 </option>
+                            <option> 5 </option>
+                        </select> 
+                        <input class = "red" name = "Chicken Burger" type = "button" value = "ADD" onclick = "add(this,'Dinner1',4.95);"/> <!-- on click we call the add function -->
+                    </li>
+                    <li> 
+                    	Cheese Burger &nbsp; $4.25 &nbsp;
+                        <select id = "Dinner2"> 
+                        	<option selected> 1 </option>
+                            <option> 2 </option>
+                            <option> 3 </option>
+                            <option> 4 </option>
+                            <option> 5 </option>
+                        </select> 
+                        <input class = "red" name = "Cheese Burger" type = "button" value = "ADD" onclick = "add(this,'Dinner2',4.25);"/>
+                    </li>
+                    <li> 
+                    	Salad Wrap &nbsp; $3.50 &nbsp;
+                        <select id = "Dinner3"> 
+                        	<option selected> 1 </option>
+                            <option> 2 </option>
+                            <option> 3 </option>
+                            <option> 4 </option>
+                            <option> 5 </option>
+                        </select> 
+                        <input class = "red" name = "Salad Wrap" type = "button" value = "ADD" onclick = "add(this,'Dinner3',3.50);"/>
+                    </li>
+                </ul>
+                <hr>
+                <h2> Drinks </h2>
+                <ul>
+                	<li> 
+                    	Coke &nbsp; $1.95 &nbsp;
+                        <select id = "Drink1"> 
+                        	<option> 1 </option>
+                            <option> 2 </option>
+                            <option> 3 </option>
+                            <option> 4 </option>
+                            <option> 5 </option>
+                        </select> 
+                        <input class = "red" name = "Coke" type = "button" value = "ADD" onclick = "add(this,'Drink1',1.95);"/>
+                    </li>
+                    <li> 
+                    	Mountain Dew &nbsp; $1.95 &nbsp;
+                        <select id = "Drink2"> 
+                        	<option> 1 </option>
+                            <option> 2 </option>
+                            <option> 3 </option>
+                            <option> 4 </option>
+                            <option> 5 </option>
+                        </select> 
+                        <input class = "red" name = "Mountain Dew" type = "button" value = "ADD" onclick = "add(this,'Drink2',1.95);"/>
+                    </li>
+                    <li> 
+                    	Sprite &nbsp; $1.95 &nbsp;
+                        <select id = "Drink3"> 
+                        	<option> 1 </option>
+                            <option> 2 </option>
+                            <option> 3 </option>
+                            <option> 4 </option>
+                            <option> 5 </option>
+                        </select> 
+                        <input class = "red" name = "Sprite" type = "button" value = "ADD" onclick = "add(this,'Drink3',1.95);"/>
+                    </li>
+                </ul>
+                <hr>
+                <h2> Desserts </h2>
+                <ul>
+                	<li> 
+                    	Cheesecake &nbsp; $2.75 &nbsp;
+                        <select id = "Dessert1"> 
+                        	<option> 1 </option>
+                            <option> 2 </option>
+                            <option> 3 </option>
+                            <option> 4 </option>
+                            <option> 5 </option>
+                        </select> 
+                       <input class = "red" name = "Cheesecake" type = "button" value = "ADD" onclick = "add(this,'Dessert1',2.75);"/>
+                    </li>
+                    <li> 
+                    	Soft Serve &nbsp; $1.50 &nbsp;
+                        <select id = "Dessert2"> 
+                        	<option> 1 </option>
+                            <option> 2 </option>
+                            <option> 3 </option>
+                            <option> 4 </option>
+                            <option> 5 </option>
+                        </select> 
+                        <input class = "red" name = "Soft Serve" type = "button" value = "ADD" onclick = "add(this,'Dessert2',1.50);"/>
+                    </li>
+                    <li> 
+                    	Sundae &nbsp; $2.15 &nbsp;
+                        <select id = "Dessert3"> 
+                        	<option> 1 </option>
+                            <option> 2 </option>
+                            <option> 3 </option>
+                            <option> 4 </option>
+                            <option> 5 </option>
+                        </select> 
+                        <input class = "red" name = "Sundae" type = "button" value = "ADD" onclick = "add(this,'Dessert3',2.15);"/>
+                    </li>
+                </ul>
+                </form>
+            </div>
+            <div id = "inner" class = "middle"> <!-- the order list is in the middle div -->
+           		<h1> ORDER LIST </h1>
+                <table style = "border : none; width : 98%;"> 
+                    <tr>
+                        <th> Item Code </th>
+                        <th> Quantity </th>
+                        <th> Item </th>
+                        <th> Price </th>
+                    </tr>
+                </table>
+                <div id = "list"> </div> <!-- the orders appear in this div tag -->
+                <br/>
+                <input name = "Remove Last" type = "button" value = "REMOVE LAST" onclick = "take();"/>
+                <input class = "red" style = "float : right;" name = "Clear" type = "button" value = "CLEAR LIST" onclick = "clearList();"/>
+            </div>
+            <div id = "inner" class = "right">
+                <h1> PAYMENT </h1>
+                <h2> Total Price </h2>
+                <div id = "totalPrice"> $0.00 </div>
+                <hr/>
+                <h2> Customer Payment </h2>
+                <div id = "customerPay"> $0.00 </div>
+                <br/>
+                <form>
+                    <input name = "1" type = "button" value = "1" onclick = "plus('1');"/>
+                    <input name = "2" type = "button" value = "2" onclick = "plus('2');"/>
+                    <input name = "3" type = "button" value = "3" onclick = "plus('3');"/>
+                    <br/>
+                    <input name = "4" type = "button" value = "4" onclick = "plus('4');"/>
+                    <input name = "5" type = "button" value = "5" onclick = "plus('5');"/>
+                    <input name = "6" type = "button" value = "6" onclick = "plus('6');"/>
+                    <br/>
+                    <input name = "7" type = "button" value = "7" onclick = "plus('7');"/>
+                    <input name = "8" type = "button" value = "8" onclick = "plus('8');"/>
+                    <input name = "9" type = "button" value = "9" onclick = "plus('9');"/>
+                    <br/>
+                    <input name = "." type = "button" value = "." onclick = "plus('.');"/>
+                    <input name = "0" type = "button" value = "0" onclick = "plus('0');"/>
+                    <input name = "<" type = "button" value = "<" onclick = "plus('<');"/>
+                    <input class = "red" name = "CLR" type = "button" value = "CLR" onclick = "plus('X');"/>
+                </form>
+                <hr/>
+                <h2> Balance </h2>
+                <div id = "change"> $0.00 </div>
+                <br/>
+                <input name = "Transact" type = "button" value = "PERFORM TRANSACTION" onclick = "transact();"/>
+            </div>
+        </div>
+        <h3/> &copy; 2015 TWINJI TECH. ALL RIGHTS RESERVED. </h3>
+        <div id = "iconbox">
+            <a target = "_blank" href = "https://www.youtube.com/c/twinjitech"> <div id = "icon"> </div> </a> 
+            <a target = "_blank" href = "https://plus.google.com/111931344510581227954?pageId=111931344510581227954"> <div id = "icon" class = "g"> </div> </a> 
+            <a target = "_blank" href = "http://twinjitech.co.nf/"> <div id = "icon" class = "tt"> </div> </a> 
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,357 @@
+@charset "utf-8";
+
+@font-face /* loading this awesome font from the 'fonts' directory */
+{
+    font-family : 'Vermin-Vibes-2-White';
+    src : url('fonts/Vermin-Vibes-2-White.ttf.woff') format('woff'),
+          url('fonts/Vermin-Vibes-2-White.ttf.svg#Vermin-Vibes-2-White') format('svg'),
+          url('fonts/Vermin-Vibes-2-White.ttf.eot'),
+          url('fonts/Vermin-Vibes-2-White.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight : normal;
+    font-style : normal;
+}
+
+#fit
+{
+	width : 100vw;
+	height : 100vh;	
+}
+
+input:focus, select:focus, button:focus /* getting rid of the weird outline in Chrome - makes it look cleaner */
+{
+    outline : none;
+}
+
+::-webkit-scrollbar /* customizing scrollbar in Chrome */
+{
+    height : 20px;
+    width : 12px;
+    background : salmon;
+}
+
+::-webkit-scrollbar-track
+{
+    background-color : salmon; /* customizing scrollbar in Chrome */
+}
+
+::-webkit-scrollbar-thumb /* customizing scrollbar in Chrome */
+{
+    background-color : white;
+    border : 1px solid lightgray;
+    -webkit-box-shadow : 2px 2px 15px 0px rgba(0,0,0,0.1);
+}
+
+html
+{
+    /*overflow-y : hidden;*/
+}
+
+body
+{
+    font-family : sans-serif;    
+    background : salmon;
+    background-image : url(images/bg1.jpg);
+    background-size : cover;
+    background-repeat : no-repeat;
+    background-position : fixed;
+    scrollbar-face-color : white; /* customizing the scrollbar in IE */
+    scrollbar-track-color : salmon;
+    scrollbar-base-color : white;
+    scrollbar-arrow-color: white;
+    padding : 5px;
+    height : 100vh;
+}
+
+#container
+{
+	margin : 20px auto;
+	width : 1050px;
+	height : 708px;
+	border-right : 1px solid white;
+    border-bottom : 1px solid white;
+	overflow : hidden;
+    border-radius : 8px;
+    border-top-left-radius : 100px;
+    border-bottom-right-radius : 100px;
+    background-color : rgba(255,255,255,0.97);
+    box-shadow : inset 4px 2px 15px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow : inset 4px 2px 15px 0px rgba(0,0,0,0.25);
+}
+
+#container.min
+{
+	width : 1050px;
+}
+
+#container.max
+{
+	width : 1366px;
+}
+
+table
+{
+    width : 100%;
+    border-bottom : 1px solid lightgray;
+}
+
+td, th
+{
+    width : 20%;
+    height : 43px;
+    line-height : 43px;
+    text-align : center;
+}
+
+th
+{
+    font-size : 18px;
+    color : salmon;
+}
+
+hr
+{
+    margin-top : 18px;
+    border : none;
+    height : 1px;
+    margin-left : -25px;
+    margin-right : -25px;
+    background : linear-gradient(to left, transparent, lightgray, transparent);
+}
+
+#totalPrice, #customerPay, #change
+{
+    font-size : 32px;
+    text-align : left;
+}
+
+#totalPrice
+{
+    font-size : 51px;
+}
+
+#list
+{
+    overflow-y : scroll;
+    overflow-x : hidden;
+    z-index : 20;
+    height : 500px;
+    border : 1px solid lightgray;
+    background-color : rgba(255,255,255,0.9);
+    box-shadow : inset 2px 2px 15px 1px rgba(0,0,0,0.1);
+    -webkit-box-shadow : inset 2px 2px 15px 1px rgba(0,0,0,0.1);
+}
+
+#inner
+{
+	float : left;
+	height : 670px;
+	padding : 25px;
+    padding-top : 16px;
+}
+
+#inner.left, #inner.right
+{
+	/*width : 300px;*/
+	width : 23%;
+}
+
+#inner.right
+{
+    /*width : 266px;*/
+	width : 18%;
+}
+
+#inner.middle
+{
+	/*width : 648px;*/
+	width : 47%;
+    background-color : rgba(255,230,220,0.2);
+	border-left : 1px solid lightgray;
+    border-right : 1px solid lightgray;
+}
+
+h1, h2, h3
+{
+	text-align : center;
+	margin-top : 15px;	
+	font-size : 30px;
+	color : black;
+}
+
+h1
+{
+    opacity : 0.7;
+}
+
+h2
+{
+	font-size : 18px;
+    color : salmon;
+}
+
+h3, h4
+{
+	font-size : 15px;
+    color : white;
+    opacity : 0.6;
+    text-align : center;
+    letter-spacing : 1px;
+}
+
+h4
+{
+    font-size : 28px;
+    font-family : 'vermin-vibes-2-white'; 
+    background-color : salmon;
+    opacity : 1;
+    padding : 6px;
+    width : 720px;
+    margin-left : auto;
+    margin-right : auto;
+    margin-bottom : 0;
+    margin-top : 30px;
+    letter-spacing : 8px;
+    border-top-left-radius : 50px;
+    border-bottom-right-radius : 50px;
+    box-shadow : 2px 2px 10px 0px rgba(0,0,0,0.4);
+    -webkit-box-shadow : 2px 2px 10px 0px rgba(0,0,0,0.4);
+}
+
+h6
+{
+    text-align : center;
+    margin-top : 50px;
+    color : grey;
+}
+
+#inner.left h2 /* different attributes for the h2 tag in the left inner div */
+{
+    text-align : left;  
+    margin-left : 30px;
+}
+
+#inner.right h2 /* different attributes for the h2 tag in the right inner div */
+{
+    text-align : left;    
+}
+
+p, ul, li
+{
+	font-family : sans-serif;	
+	color : black;
+	font-size : 13px;
+	text-align : left;
+    list-style-type : none;
+}
+
+li
+{
+    text-align : right;   
+}
+
+input, select
+{
+	border : 1px solid lightgray;
+	background-color : white;
+    margin-bottom : 10px;
+    margin-left : 2px;
+    margin-right : 2px;
+	color : black;
+	font-size : 16px;
+    border-radius : 7px;
+    transition : all 0.4s ease;
+    padding-left : 8px;
+    padding-right : 8px;
+    width : auto;
+    min-width : 50px;
+    text-align : center;
+    height : 36px;
+    box-shadow : 2px 2px 10px 0px rgba(0,0,0,0.13);
+    -webkit-box-shadow : 2px 2px 10px 0px rgba(0,0,0,0.13);
+}
+
+select
+{
+    -webkit-appearance : none; /* gets rid of the select downwards arrow - I'm adding my own custom one that matches the theme of the design */
+    -moz-appearance : none;
+    appearance : none;
+    background : url(images/ui/arrow.png) 96% no-repeat white;
+}
+
+select::-ms-expand /* gets rid of the arrow in IE */
+{
+    display : none;
+}
+
+option
+{
+    border : none;
+    text-align : center;
+}
+
+option:hover, option:active, option:focus
+{
+    background-color : salmon;
+    color : white;
+}
+
+input.red
+{
+    background-color : salmon;
+    color : white;
+}
+
+input:hover, select:hover
+{
+	box-shadow : 2px 2px 10px 0px rgba(0,0,0,0);
+    -webkit-box-shadow : 2px 2px 10px 0px rgba(0,0,0,0);
+}
+
+input:active, select:active
+{
+    box-shadow : inset 2px 2px 10px 0px rgba(0,0,0,0.3);
+    -webkit-box-shadow : inset 2px 2px 10px 0px rgba(0,0,0,0.3); 
+    transition : all 0.1s ease;
+}
+
+select
+{
+	width : 52px;	
+    padding : 7px;
+}
+
+#iconbox
+{
+    margin : 0 auto;
+    margin-bottom : 150px;
+    width : 126px;
+    height : auto;
+    background-color : red;
+}
+
+#icon /* these are the links below my application */
+{
+    margin : 0 6px;
+    opacity : 0.6;
+    float : left;
+    width : 30px;
+    height : 30px;
+    background-image : url(images/logos/youtube.png);
+    background-size : cover;
+    transition : all 0.2s linear;
+}
+
+#icon:hover
+{
+    opacity : 1;
+}
+
+#icon.g
+{
+    background-image : url(images/logos/googleplus.png);
+}
+
+#icon.tt
+{
+    background-image : url(images/logos/twinjitech.png);
+}
